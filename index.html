@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<title>CLES Flash v1.2 Review</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="app">
+<header><div><div class="logo" id="appTitle">CLES <span>3秒フラッシュ v1.1</span></div><div class="sub">Androidスクロール修正</div></div><button id="exitFlashBtn" class="ghost">Home</button></header>
+<div id="normalArea"><main>
+<nav class="tabs"><button class="tab-btn active" data-tab="study">勉強</button><button class="tab-btn" data-tab="routine">ルーチン</button><button class="tab-btn" data-tab="advent">ご褒美</button><button class="tab-btn" data-tab="dashboard">分析</button><button class="tab-btn" data-tab="review">復習</button><button class="tab-btn" data-tab="manage">管理</button></nav>
+<section id="study" class="tab active">
+<div class="banner-wrap"><div class="banner-img"></div><div class="banner-overlay"></div><div class="banner-content"><div class="banner-kicker">第一志望へ行く</div><h1 class="banner-title" id="bannerTitle">3秒で、知ってるかだけ。</h1><div class="banner-subtitle" id="bannerSubtitle">Partは3区分、Sectionは100語単位。</div></div></div>
+
+<div class="panel preset"><span class="tag">Preset Area</span><h2>プリセット領域</h2><div class="grid two" id="presetGrid">
+<button class="preset-card" data-preset="p1_100"><b>Part1 基礎100</b><span>1〜800から100語 / 3秒 / random</span></button>
+<button class="preset-card" data-preset="p12_100"><b>Part1+2 標準100</b><span>1〜1500から100語 / 3秒 / random</span></button>
+<button class="preset-card" data-preset="all_100"><b>全体100</b><span>1〜1900から100語 / 3秒 / random</span></button>
+<button class="preset-card" data-preset="weak_100"><b>弱点100</b><span>unknown/timeout優先 / 100語 / 3秒</span></button>
+<button class="preset-card" data-preset="p1_200"><b>Part1 基礎200</b><span>1〜800から200語 / 3秒 / random</span></button>
+<button class="preset-card" data-preset="all_300"><b>全体300</b><span>1〜1900から300語 / 3秒 / random</span></button>
+</div><button id="startPresetBtn" class="primary big full">選択したプリセットでStart</button></div>
+<details class="panel custom"><summary><b>カスタマイズ領域を開く</b></summary>
+<label class="field">出題範囲<select id="scope"><option value="p1">Part 1（1〜800）</option><option value="p2">Part 2（801〜1500）</option><option value="p3">Part 3（1501〜1900）</option><option value="p12">Part 1 + 2</option><option value="all" selected>Part 1 + 2 + 3</option><option value="sections">Section指定（100語単位）</option></select></label>
+<div id="sectionPicker" class="section-picker hidden"></div>
+<label class="field">出題数<select id="count"><option>50</option><option selected>100</option><option>200</option><option>300</option></select></label>
+<label class="field">出題順<select id="mode"><option value="random" selected>random</option><option value="unknown">unknown priority</option><option value="sequential">sequential</option></select></label>
+<label class="field">制限時間<select id="limit" disabled><option value="3000" selected>3秒固定（絶対判定）</option></select></label>
+<div class="toggle-row"><label><input id="showMeaning" type="checkbox"> 意味表示</label><label><input id="autoSpeak" type="checkbox"> 自動読み上げ</label></div>
+<button id="startBtn" class="secondary big full">カスタム設定でStart</button></details>
+</section>
+
+<section id="routine" class="tab">
+  <div class="panel">
+    <span class="tag">How to Use / Daily Routine</span>
+    <h2>使い方と1日100語ルーチン</h2>
+    <p><b>結論：</b>毎日100語、意味OFF、3秒は絶対判定、復習は後回し。使い方・守ること・週次運用はこのタブだけ見ればOKです。</p>
+    <div class="stats">
+      <div class="stat"><span>単語数</span><br><b>100</b></div>
+      <div class="stat"><span>目安時間</span><br><b>7〜10分</b></div>
+      <div class="stat"><span>判定</span><br><b>3秒</b></div>
+      <div class="stat"><span>復習</span><br><b>後で</b></div>
+    </div>
+  </div>
+
+<div class="panel">
+  <span class="tag">Weekly Export</span>
+  <h2>週次ログ出力メモ</h2>
+  <p><b>毎週 日曜または月曜の夜</b> に、学習ログを <b>JSON</b> または <b>CSV</b> で出力して、このチャットへアップロードします。</p>
+  <ul>
+    <li>おすすめ：<b>JSON出力</b>（分析用に最適）</li>
+    <li>補助：CSV出力（表で見る用）</li>
+    <li>目安：毎週 日曜・月曜 20:30</li>
+    <li>アップロード後、週次サマリー・苦手単語・改善/悪化・次週方針を作成</li>
+  </ul>
+</div>
+
+  <div class="panel">
+    <h2>毎日のやり方</h2>
+    <ol>
+      <li><b>全体100</b> または <b>Part1 100</b> を選ぶ。</li>
+      <li><b>意味表示OFF</b> で始める。</li>
+      <li>3秒以内に <b>知ってる / 知らない</b> を押す。</li>
+      <li>迷ったら <b>知らない</b>。</li>
+      <li>終わるまで調べない。復習しない。</li>
+    </ol>
+  </div>
+
+  <div class="panel">
+    <h2>1週間の回し方</h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>曜日</th><th>メニュー</th><th>目的</th></tr></thead>
+        <tbody>
+          <tr><td>月</td><td>Part1 100</td><td>基礎反応</td></tr>
+          <tr><td>火</td><td>Part1 100</td><td>基礎定着</td></tr>
+          <tr><td>水</td><td>Part1+2 100</td><td>範囲拡張</td></tr>
+          <tr><td>木</td><td>全体100</td><td>全体接触</td></tr>
+          <tr><td>金</td><td>弱点100</td><td>unknown / timeout対策</td></tr>
+          <tr><td>土</td><td>全体100</td><td>ランダム耐性</td></tr>
+          <tr><td>日</td><td>復習・KPI確認</td><td>調整日</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="panel">
+    <h2>守ること</h2>
+    <ul>
+      <li>1問で止まらない。</li>
+      <li>正確な和訳を探しにいかない。</li>
+      <li>3秒超えは負けではなくデータ。</li>
+      <li>「知ってる」は3秒以内に意味・イメージが出た時だけ。</li>
+      <li>100語で終える。やりすぎない。</li>
+    </ul>
+  </div>
+
+  <div class="panel">
+    <h2>さらに効果的な使い方</h2>
+    <ul>
+      <li>朝・夜など時間帯を変えて、効果最大化時間帯を見る。</li>
+      <li>最初の2週間は同じルーチンで回して、データを安定させる。</li>
+      <li>2週間後から、余裕日だけ200語に増やす。</li>
+      <li>復習タブでは <b>unknown / timeout / 直近悪化</b> を優先する。</li>
+      <li>管理タブでは <b>接触単語数 / timeout率 / 直近3回のms</b> だけ見る。</li>
+    </ul>
+  </div>
+
+  <div class="panel">
+    <h2>効果が出ているサイン</h2>
+    <ul>
+      <li>timeoutが減る。</li>
+      <li>直近3回の反応速度が短くなる。</li>
+      <li>unknownがknownに変わる。</li>
+      <li>Partをまたいでも反応が落ちにくくなる。</li>
+    </ul>
+  </div>
+</section>
+
+
+<section id="advent" class="tab">
+  <div class="panel">
+    <span class="tag">Reward Puzzle</span>
+    <h2>アドベントカレンダー風ご褒美</h2>
+    <p><b>100語達成した日</b> ごとに1ピース解放。30ピースでスペシャルイラストが完成します。</p>
+    <div class="advent-legend">
+      <div class="advent-mini"><span>解放ピース</span><br><b id="adventUnlocked">0</b> / 30</div>
+      <div class="advent-mini"><span>達成日数</span><br><b id="adventDays">0</b></div>
+      <div class="advent-mini"><span>次の解放</span><br><b id="adventNext">100語</b></div>
+    </div>
+  </div>
+  <div class="panel">
+    <div class="advent-board">
+      <div class="advent-art"></div>
+      <div id="adventGrid" class="advent-grid"></div>
+    </div>
+  </div>
+  <div class="panel">
+    <h2>解放ルール</h2>
+    <ul>
+      <li>1日のattempt数が100以上で、その日を「達成」とします。</li>
+      <li>達成日が1日増えるごとに、左上から1ピースずつ解放します。</li>
+      <li>30日達成で1枚完成です。</li>
+      <li>unknownやtimeoutがあってもOK。大事なのは毎日接触すること。</li>
+    </ul>
+  </div>
+</section>
+
+
+<section id="dashboard" class="tab">
+  <div class="panel review-hero">
+    <span class="tag">Review Intelligence</span>
+    <h1 class="review-title">Review Timeline</h1>
+    <div class="review-sub">日次・週次・月次・全体を、CLESの世界観のまま切り替える。</div>
+    <div class="period-switch">
+      <button class="period-btn active" data-period="day" onclick="setReviewPeriod('day')">Day</button>
+      <button class="period-btn" data-period="week" onclick="setReviewPeriod('week')">Week</button>
+      <button class="period-btn" data-period="month" onclick="setReviewPeriod('month')">Month</button>
+      <button class="period-btn" data-period="all" onclick="setReviewPeriod('all')">All</button>
+    </div>
+  </div>
+  <div class="panel">
+    <span class="tag">Current Scope</span>
+    <h2 id="dashScopeTitle">週単位レビュー</h2>
+    <div id="dashSummary" class="stats"></div>
+  </div>
+  <div class="panel">
+    <span class="tag">Public Links</span>
+    <h2>表示リンク</h2>
+    <div id="dashLinks"></div>
+  </div>
+  <div class="panel">
+    <span class="tag">Weak Signal</span>
+    <h2>苦手シグナル</h2>
+    <div id="dashWeak" class="table-wrap"></div>
+  </div>
+  <div class="panel">
+    <span class="tag">Voice Commands</span>
+    <h2>切替用の単文</h2>
+    <div>
+      <span class="prompt-chip">週単位で見せて</span>
+      <span class="prompt-chip">月単位で見せて</span>
+      <span class="prompt-chip">全体で見せて</span>
+      <span class="prompt-chip">今日の苦手単語</span>
+      <span class="prompt-chip">反応が遅い単語だけ</span>
+      <span class="prompt-chip">UnknownとTimeoutだけ復習</span>
+    </div>
+  </div>
+</section>
+
+<section id="review" class="tab"><div class="panel"><h2>復習リスト</h2><div class="filters"><select id="fPart"><option value="">Part全て</option><option value="1">Part1</option><option value="2">Part2</option><option value="3">Part3</option></select><select id="fSection"><option value="">Section全て</option></select><select id="fResult"><option value="">全て</option><option value="unknown">unknownあり</option><option value="timeout">timeoutあり</option><option value="unseen">未実施</option></select><select id="fSort"><option value="unknown">unknown多い順</option><option value="timeout">timeout多い順</option><option value="reaction">反応遅い順</option><option value="compare">直近改善大</option><option value="last">last_seen古い順</option><option value="id">word_id順</option></select></div><div class="grid two"><button id="exportCsv" class="secondary">CSV出力</button><button id="exportJson" class="secondary">JSON出力</button></div><div id="reviewTable" class="table-wrap"></div></div></section>
+<section id="manage" class="tab"><div class="panel"><h2>管理ダッシュボード</h2><div id="kpiOverall" class="stats"></div></div>
+<div class="panel">
+  <span class="tag">Weekly Export</span>
+  <h2>週次ログ出力メモ</h2>
+  <p><b>毎週 日曜または月曜の夜</b> に、学習ログを <b>JSON</b> または <b>CSV</b> で出力して、このチャットへアップロードします。</p>
+  <ul>
+    <li>おすすめ：<b>JSON出力</b>（分析用に最適）</li>
+    <li>補助：CSV出力（表で見る用）</li>
+    <li>目安：毎週 日曜・月曜 20:30</li>
+    <li>アップロード後、週次サマリー・苦手単語・改善/悪化・次週方針を作成</li>
+  </ul>
+</div>
+<div class="panel custom"><span class="tag">Banner</span><h2>バナー設定</h2><label class="field">バナータイトル<input id="bannerTitleInput"></label><label class="field">バナーサブタイトル<input id="bannerSubtitleInput"></label><label class="field">ヘッダータイトルバナー画像<input id="bannerInput" type="file" accept="image/*"></label><label class="field">バナー画像の濃さ<select id="bannerOpacity"><option value=".72">薄い</option><option value=".90">標準</option><option value="1" selected>濃い</option></select></label><div class="toggle-row"><label><input id="bannerEnabled" type="checkbox" checked> バナー画像ON</label></div><div id="bannerPreview" class="banner-preview"></div><div class="grid two"><button id="saveThemeBtn" class="primary">保存</button><button id="resetThemeBtn" class="ghost">見た目リセット</button></div></div><div class="panel"><h2>1回目 vs 2回目 反応速度比較</h2><div id="kpiReactionCompare"></div></div><div class="panel"><h2>効果最大化時間帯</h2><div id="kpiBestTime"></div></div><div class="panel"><h2>時系列（日別）</h2><div id="kpiDaily"></div></div><div class="panel"><h2>Part別 / Section別</h2><div id="kpiPartSection"></div></div><div class="panel"><h2>単語別 KPI TOP50</h2><div id="kpiWord"></div></div><div class="panel"><h2>読み込み状況</h2><div id="status">起動中...</div><p>Android端末向けに touchend / pointerup 対応済み。通常画面はページ全体スクロール方式に修正済み。</p><button id="resetBtn" class="ghost big full">履歴リセット</button></div></section>
+</main></div>
+<div id="flashArea" class="flash-view"><div class="flash-top"><div id="progress">0/0</div><div id="partsection">Part - / Section -</div><button id="speakBtn" class="ghost">🔊</button></div><div class="timer-wrap"><div id="bar" class="timer-bar"></div></div><div class="flash-card"><div id="flashWord" class="word"></div><div id="flashMeaning" class="meaning hidden"></div></div><div class="actions"><button id="unknownBtn" class="bad answer">← 知らない</button><button id="knownBtn" class="good answer">知ってる →</button></div></div>
+</div><div id="toast" class="toast"></div>
+<script src="js/data-loader.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
