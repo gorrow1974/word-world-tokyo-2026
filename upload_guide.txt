@@ -1,0 +1,26 @@
+GitHub Pages アップロード手順
+
+1. cles_flash_optimized.zip をダウンロード
+2. ZIPを解凍
+3. GitHubのリポジトリを開く
+4. Add file → Upload files
+5. 解凍した中身をまとめてアップロード
+
+アップロード対象:
+- index.html
+- css/style.css
+- js/data-loader.js
+- js/app.js
+- data/words_part1.json
+- data/words_part2.json
+- data/words_part3.json
+- data/seed_attempts.json
+- assets/images/default-banner.*
+- assets/images/default-advent.*
+
+注意:
+フォルダ名を変えないでください。
+index.htmlだけアップロードしても動きません。
+
+3秒仕様:
+表示開始から3000msを超えた場合は必ず timeout になります。
