@@ -1,0 +1,53 @@
+﻿id,source,question,signal,type,type_jp,arrow,answer
+Q001,High Context / Low Context,下線部①-あ、①-いが表す典型的な国民の例を、それぞれ本文中から抜き出して答えなさい。,例 / 本文中から抜き出して,Example,Example,"long-term couple
+↓
+Japanese
+
+new couple
+↓
+Americans",①-あ: Japanese / ①-い: Americans
+Q002,High Context / Low Context,What does a high-context culture mean?,What does ... mean?,Definition,意味説明型,"High Context
+↓
+Shared knowledge
+↓
+Less direct explanation",A culture where people expect others to understand from shared context without saying everything directly.
+Q003,High Context / Low Context,What does a low-context culture mean?,What does ... mean?,Definition,意味説明型,"Low Context
+↓
+Less shared knowledge
+↓
+More direct explanation",A culture where people communicate by saying things clearly and directly.
+Q056,School Uniforms,Which shows the ranking of countries which adopt school uniforms from highest to lowest?,ranking / highest to lowest,Comparison,比較・対比型,"South Korea
+↓
+China
+↓
+Japan",South Korea → China → Japan
+Q058,School Uniforms,Which best summarizes Mr. Thomas' opinion about wearing a uniform?,best summarizes,Summary,要約型,"Mr. Thomas
+↓
+uniform = school identity
+↓
+take pride",Uniforms are part of a school's identity.
+Q060,School Uniforms,Which is the most suitable title for the article?,most suitable title,Summary,要約型,"pros and cons
+↓
+debate
+↓
+title",Are School Uniforms Good for Students?
+Q076,American Humor,What does 'Any fruit or vegetables?' really mean?,really mean,Inference,意味推測型,"Airport customs
+↓
+short question
+↓
+Are you carrying fruit or vegetables?",Are you carrying any fruits or vegetables?
+Q084,American Humor,Why did the writer feel like hugging the taxi driver?,Why,Reason,因果・理由型,"taxi driver saw joke chance
+↓
+understood humour
+↓
+writer happy",Because he was glad to meet someone in America with an active sense of humour.
+Q101,Logic Expression / Grammar,I will never forget ( ) in the Atlantic Ocean for the first time.,forget + gerund,Grammar,文法型,"forget
++
+V-ing
+↓
+remember past experience",swimming
+Q121,Logic Expression / Grammar,The teacher was happy to be able to tell the boys' mother that they had been making a very good progress at school.,progress is uncountable,Error Detection,誤り発見型,"a very good progress
+↓
+progress uncountable
+↓
+very good progress",a very good progress
