@@ -1,0 +1,106 @@
+{
+  "title": "How will AI change the world?",
+  "theme": "AI / human-compatible technology",
+  "levels": [
+    {
+      "level": "Lv01",
+      "name": "入口反応",
+      "prompt": "human-compatible",
+      "question": "",
+      "choices": [
+        "知ってる",
+        "知らない"
+      ],
+      "answer": "知ってる",
+      "arrow": "入口反応",
+      "target": "1秒以内",
+      "targetSec": 15,
+      "note": "見た瞬間に反応できたかを見る。"
+    },
+    {
+      "level": "Lv02",
+      "name": "概念",
+      "prompt": "human-compatible",
+      "question": "一番近いイメージは？",
+      "choices": [
+        "人間を置き換える",
+        "人間に合わせる",
+        "人間を監視する",
+        "人間を無視する"
+      ],
+      "answer": "人間に合わせる",
+      "arrow": "AI → 人間の目的に合わせる → 安全に使える",
+      "target": "3秒以内",
+      "targetSec": 15,
+      "note": "単語ではなく概念として見る。"
+    },
+    {
+      "level": "Lv03",
+      "name": "文",
+      "prompt": "Can we build AI systems that help us solve human problems?",
+      "question": "この文は何を聞いている？",
+      "choices": [
+        "AIは人間より速いか",
+        "AIは感情を持つか",
+        "AIを問題解決に使えるか",
+        "AIは仕事を奪うか"
+      ],
+      "answer": "AIを問題解決に使えるか",
+      "arrow": "AI systems → help humans → solve problems",
+      "target": "5秒以内",
+      "targetSec": 15,
+      "note": "文の役割を見る。"
+    },
+    {
+      "level": "Lv04",
+      "name": "段落",
+      "prompt": "AI can support medicine, education, and research. However, it may also create risks if its goals are not aligned with human values.",
+      "question": "この段落の流れは？",
+      "choices": [
+        "理由 → 結果",
+        "可能性 ⇔ リスク",
+        "具体例 → 主張",
+        "問題 → 解決策"
+      ],
+      "answer": "可能性 ⇔ リスク",
+      "arrow": "AIの可能性 ⇔ AIのリスク",
+      "target": "10秒以内",
+      "targetSec": 15,
+      "note": "段落の流れを見る。"
+    },
+    {
+      "level": "Lv05",
+      "name": "構造",
+      "prompt": "AIの可能性とリスクを比べ、最後に人間に合うAIを作れるかを問う。",
+      "question": "この話の構造は？",
+      "choices": [
+        "理由 → 結果",
+        "具体例 → 主張",
+        "A ⇔ B → 結論",
+        "問題 → 解決策"
+      ],
+      "answer": "A ⇔ B → 結論",
+      "arrow": "AIの可能性 ⇔ AIの危険 → 人間に合うAIを作れるか",
+      "target": "3秒以内",
+      "targetSec": 15,
+      "note": "構造を見抜く。"
+    },
+    {
+      "level": "Lv06",
+      "name": "意図",
+      "prompt": "AI is neither simply good nor simply dangerous. The real question is whether we can design it to work with human values.",
+      "question": "出題者は何を見たい？",
+      "choices": [
+        "AIの専門用語を暗記する力",
+        "単純な賛否ではなく可能性と危険を比べて結論を読む力",
+        "AIの歴史年表を覚える力",
+        "難しい単語を訳す力"
+      ],
+      "answer": "単純な賛否ではなく可能性と危険を比べて結論を読む力",
+      "arrow": "便利 ⇔ 危険 → 人間に合う設計",
+      "target": "10〜20秒",
+      "targetSec": 15,
+      "note": "構造の奥にある意図を見る。"
+    }
+  ]
+}
