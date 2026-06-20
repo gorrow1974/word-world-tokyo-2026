@@ -1,2 +1,2 @@
-Word World TED Lv UI Sample v1.4
-下部の知ってる/知らないを削除。Lv01は画面内のみで選択。
+Word World v16 Level Gate
+Lv01開始、80%達成でLv02を少し解放。Lvが上がるほど合格ラインを引き上げ。
