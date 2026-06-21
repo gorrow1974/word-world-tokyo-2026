@@ -1,6 +1,7 @@
 {
   "config": {
     "timeLimitSec": 15,
+    "autoNextDelayMs": 320,
     "gates": {
       "1": {
         "minAttempts": 5,

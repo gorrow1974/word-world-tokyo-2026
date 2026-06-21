@@ -1,2 +1,2 @@
-Word World v17.1 Force 2 Column
-スマホでも左：単語／右：選択肢の横並びを維持。
+Word World v18 Sleek Gate
+ログリセット削除、右上設定、Lv01軽快自動送り、2カラム固定、Lv02以降は分からない。
