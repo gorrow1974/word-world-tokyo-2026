@@ -1,2 +1,2 @@
-Word World v18 Sleek Gate
-ログリセット削除、右上設定、Lv01軽快自動送り、2カラム固定、Lv02以降は分からない。
+Word World Core 001-003
+Golden Sentence + Flow Arrow + 共テ型Question + Reflection 組み込み版。

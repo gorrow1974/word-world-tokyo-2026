@@ -1,0 +1,67 @@
+{
+  "units": [
+    {
+      "id": "001",
+      "emoji": "🤖",
+      "title": "Can AI Become Human-Compatible?",
+      "theme": "Technology × Ethics",
+      "type": "Type-A",
+      "structure": "A ⇔ B → Conclusion",
+      "golden": "The challenge is not building smarter AI.\nThe challenge is building wiser AI.",
+      "article": "Artificial intelligence is becoming more powerful every year.\n\nAI can help doctors detect diseases, assist teachers in creating personalized lessons, and help scientists analyze large amounts of data.\n\nBecause of these benefits, many people believe AI will improve our lives.\n\nHowever, there is also a concern. What happens if AI pursues goals that do not match human values?\n\nA highly capable AI system might make decisions that are efficient but harmful to people.\n\nThe goal is not simply to build smarter AI. The goal is to build AI that works well with humanity.",
+      "arrow": "Benefits of AI\n⇔\nRisks of AI\n↓\nHuman-Compatible AI",
+      "qt": "Best Summary",
+      "q": "Which is the best summary?",
+      "choices": [
+        "AI is becoming powerful, so humans should stop using it.",
+        "AI can bring benefits, but it must be designed to work well with human values.",
+        "AI is useful only for doctors and scientists.",
+        "AI will automatically become ethical as it becomes smarter."
+      ],
+      "a": 1,
+      "reflection": "If AI became your teacher, doctor, or boss, what rule should it always follow?"
+    },
+    {
+      "id": "002",
+      "emoji": "⏳",
+      "title": "Why Do Humans Procrastinate?",
+      "theme": "Psychology × Behavior",
+      "type": "Type-B",
+      "structure": "Problem → Cause → Solution",
+      "golden": "Procrastination is not a time problem.\nIt is a design problem.",
+      "article": "Almost everyone procrastinates sometimes.\n\nStudents delay homework. Workers postpone important tasks. Even experienced professionals often avoid difficult work.\n\nMany people believe procrastination happens because they are lazy. However, psychologists suggest a different explanation.\n\nThe human brain naturally prefers immediate rewards over future rewards.\n\nChecking a message or watching a short video provides instant satisfaction. In contrast, studying for an exam may provide benefits only in the future.\n\nResearch shows that changing the environment can be more effective than relying on willpower alone.\n\nThe challenge is not becoming a different person. The challenge is designing a better system for yourself.",
+      "arrow": "Procrastination\n↓\nImmediate rewards\n↓\nEnvironment design\n↓\nBetter action",
+      "qt": "Best Conclusion",
+      "q": "Which conclusion best matches the article?",
+      "choices": [
+        "People procrastinate because they are always lazy.",
+        "The best way to stop procrastinating is to wait for motivation.",
+        "Changing your environment can help you act better.",
+        "Future rewards are always stronger than immediate rewards."
+      ],
+      "a": 2,
+      "reflection": "What is one distraction you could remove from your study environment today?"
+    },
+    {
+      "id": "003",
+      "emoji": "🛌",
+      "title": "Why Sleep Matters",
+      "theme": "Health × Brain Science",
+      "type": "Type-D",
+      "structure": "Observation → Discovery → Implication",
+      "golden": "Sleep is not rest.\nSleep is learning.",
+      "article": "Many people see sleep as passive time.\n\nWhen we sleep, we appear to be doing nothing. However, the brain is surprisingly active during sleep.\n\nResearchers have discovered that sleep plays an important role in memory, learning, emotional regulation, and physical recovery.\n\nIn one experiment, participants learned a new skill and then slept. Another group learned the same skill but stayed awake.\n\nThe group that slept performed significantly better the next day.\n\nDuring sleep, the brain reorganizes information and strengthens important neural connections.\n\nSleep is not time lost. Sleep is an investment in tomorrow's performance.",
+      "arrow": "Common belief\n↓\nDiscovery\n↓\nImplication",
+      "qt": "Best Title",
+      "q": "Which title best matches the article?",
+      "choices": [
+        "Why Sleep Is Only Rest",
+        "How Sleep Supports Learning and Performance",
+        "Why Students Should Study All Night",
+        "How to Avoid Sleep"
+      ],
+      "a": 1,
+      "reflection": "What will you do tonight because of this article?"
+    }
+  ]
+}
