@@ -37,9 +37,15 @@ Safariで古い表示が残る場合は、ページを再読み込みしてく�
 - 学習ログ初期化は確認ダイアログとDELETE入力を必須化
 - 保存スキーマ `cles.userdata.v1` を維持
 
-## v1.5.1 relation-hint update
+## v1.5.2 relation-hint update
 - The first view no longer highlights or exposes the target chunk in the question meta.
 - Hint 1 masks the chunk and separates the left/right context so the learner can reason about the relation first.
 - Hint 2 reveals/highlights the keyword only after the relation step.
 - Learning logs now preserve `hint_level` and `hint_events` for later analysis.
 - Existing `cles.userdata.v1` storage and schema remain unchanged so v1.5.0 learning logs continue to load.
+
+
+## v1.5.2
+- Review Room に「次の10問へ →」を追加
+- レビューで示した弱点傾向を weakTypes() で反映し、そのまま次の10問へ進める導線を追加
+- 「今日はここまで」も残し、学習継続を強制しない
