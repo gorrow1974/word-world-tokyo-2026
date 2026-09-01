@@ -1,0 +1,103 @@
+{
+  "schema": "cles-weekly-content",
+  "schema_version": "1.0",
+  "app_version": "1.3.0",
+  "updated_at": "2026-07-17",
+  "weeks": [
+    {
+      "id": "week-01",
+      "label": "Week 01",
+      "title": "Reading Structure Starter",
+      "item_ids": [
+        "Q001",
+        "Q002",
+        "Q003",
+        "Q004",
+        "Q005",
+        "Q006",
+        "Q007",
+        "Q008",
+        "Q009",
+        "Q010"
+      ],
+      "header_image": "assets/header/default.jpeg",
+      "subtitle": "一問たったの3秒で！毎日10問30秒を目指して頭の中を構造化しよう！"
+    },
+    {
+      "id": "week-02",
+      "label": "Week 02",
+      "title": "WHY / SO Focus",
+      "item_ids": [
+        "Q011",
+        "Q012",
+        "Q013",
+        "Q014",
+        "Q015",
+        "Q016",
+        "Q017",
+        "Q018",
+        "Q019",
+        "Q020"
+      ],
+      "header_image": "assets/header/default.jpeg",
+      "subtitle": "一問たったの3秒で！毎日10問30秒を目指して頭の中を構造化しよう！"
+    },
+    {
+      "id": "week-03",
+      "label": "Week 03",
+      "title": "WHAT / DECIDE Focus",
+      "item_ids": [
+        "Q021",
+        "Q022",
+        "Q023",
+        "Q024",
+        "Q025",
+        "Q026",
+        "Q027",
+        "Q028",
+        "Q029",
+        "Q030"
+      ],
+      "header_image": "assets/header/default.jpeg",
+      "subtitle": "一問たったの3秒で！毎日10問30秒を目指して頭の中を構造化しよう！"
+    },
+    {
+      "id": "week-04",
+      "label": "Week 04",
+      "title": "VS / EX / DATA Mix",
+      "item_ids": [
+        "Q031",
+        "Q032",
+        "Q033",
+        "Q034",
+        "Q035",
+        "Q036",
+        "Q037",
+        "Q038",
+        "Q039",
+        "Q040"
+      ],
+      "header_image": "assets/header/default.jpeg",
+      "subtitle": "一問たったの3秒で！毎日10問30秒を目指して頭の中を構造化しよう！"
+    },
+    {
+      "id": "week-05",
+      "label": "Week 05",
+      "title": "Balanced Review",
+      "item_ids": [
+        "Q041",
+        "Q042",
+        "Q043",
+        "Q044",
+        "Q045",
+        "Q046",
+        "Q047",
+        "Q048",
+        "Q049",
+        "Q050"
+      ],
+      "header_image": "assets/header/default.jpeg",
+      "subtitle": "一問たったの3秒で！毎日10問30秒を目指して頭の中を構造化しよう！"
+    }
+  ]
+}

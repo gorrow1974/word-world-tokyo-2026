@@ -1,0 +1,42 @@
+{
+  "schema": "cles-user-data",
+  "schema_version": "1.0",
+  "canonical_storage_key": "cles.userdata.v1",
+  "separation": {
+    "question_bank": "data.json",
+    "application": "index.html",
+    "storage_logic": "storage_manager.js",
+    "user_backup": "cles_user_data_backup_YYYY-MM-DD.json"
+  },
+  "compatibility": {
+    "legacy_log_keys": [
+      "clesv1logs",
+      "cles_v1_logs",
+      "clesThinkVs5Logs"
+    ],
+    "legacy_session_keys": [
+      "clesv1idx",
+      "clesv1order",
+      "clesv1sessionOrder",
+      "cles_v1_sessionOrder",
+      "clesv1sessionPos",
+      "cles_v1_sessionPos",
+      "clesv1activeSession",
+      "cles_v1_sessionId",
+      "clesv1lastWeak",
+      "cles_v1_lastWeak"
+    ],
+    "legacy_json_import": [
+      "raw log array",
+      "object with logs/state",
+      "canonical cles-user-data backup"
+    ]
+  },
+  "rules": [
+    "Application updates must not delete the canonical storage key.",
+    "Question-bank JSON must never contain personal logs.",
+    "Import merges and de-duplicates logs; it does not overwrite history.",
+    "Backup before changing URL/domain because localStorage is origin-scoped.",
+    "Patch releases must preserve the storage schema."
+  ]
+}
