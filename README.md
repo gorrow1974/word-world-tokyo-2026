@@ -49,3 +49,10 @@ Safariで古い表示が残る場合は、ページを再読み込みしてく�
 - Review Room に「次の10問へ →」を追加
 - レビューで示した弱点傾向を weakTypes() で反映し、そのまま次の10問へ進める導線を追加
 - 「今日はここまで」も残し、学習継続を強制しない
+
+
+## v1.5.3 Balanced Relations
+- Q040-Q050 を全面差し替え。同一の `on the other hand` 連発を解消。
+- Week 05 は WHY / SO / EX / DATA / WHAT / DECIDE / VS を混在。
+- Adaptive Next 10 / Review Queue は同一キーワードを1セッション1回まで、同一Functionを原則最大2問までに制御。
+- 弱点Functionの優先は維持しつつ、表現の多様性を優先。

@@ -1,4 +1,4 @@
-const APP_VERSION='1.5.2',QUESTION_BANK_VERSION='cles-v1-50-final',PROFILE_KEY='cles.activeProfile.v1',PROFILE_SET_KEY='cles.profileConfigured.v1',NAME_KEY='cles.learnerName.v1';
+const APP_VERSION='1.5.3',QUESTION_BANK_VERSION='cles-v1-53-balanced',PROFILE_KEY='cles.activeProfile.v1',PROFILE_SET_KEY='cles.profileConfigured.v1',NAME_KEY='cles.learnerName.v1';
 let pendingSettingsProfile='',DATA={items:[],groups:[]},WEEKLY={weeks:[]},TODAY={days:{},default:{}},allItems=[],groups=[],currentPack=[],currentIndex=0,currentWeekId='',answerLocked=false,timer,t0=0,limit=10,hintLevel=0,hintTimes=[],activeProfile=localStorage.getItem(PROFILE_KEY)||'';
 const E=id=>document.getElementById(id);
 async function loadJsonSafe(path,fallback){
@@ -138,7 +138,16 @@ function mapItems(){return Object.fromEntries(allItems.map(x=>[x.id,x]))}functio
 function startReviewQueue(){currentPack=smartSort([...allItems],weakTypes()).slice(0,10);currentIndex=0;currentWeekId='review-queue';E('learnTitle').textContent='Review Queue';showScreen('learnScreen');renderQuestion()}
 function startAdaptiveNextTen(){currentPack=smartSort([...allItems],weakTypes()).slice(0,10);currentIndex=0;currentWeekId='adaptive-next';E('learnTitle').textContent='次の10問';showScreen('learnScreen');renderQuestion()}
 function weakTypes(){let out={};groups.forEach(g=>{let l=learnerLogs().filter(x=>(x.correct_answer||x.type)===g.id);if(!l.length){out[g.id]=.5;return}let acc=l.filter(x=>x.ok).length/l.length,mas=l.reduce((a,b)=>a+(+b.mastery_score||0),0)/l.length/100;out[g.id]=1-(acc+mas)/2});return out}
-function smartSort(a,w){let recent=new Set(learnerLogs().slice(-8).map(x=>x.item_id));return a.map(it=>({it,score:Math.random()*20+(w[it.type]||0)*25-(recent.has(it.id)?15:0)})).sort((x,y)=>y.score-x.score).map(x=>x.it)}
+function smartSort(a,w){
+ let recent=new Set(learnerLogs().slice(-8).map(x=>x.item_id));
+ let ranked=a.map(it=>({it,score:Math.random()*20+(w[it.type]||0)*25-(recent.has(it.id)?15:0)})).sort((x,y)=>y.score-x.score);
+ let picked=[],chunkCount={},typeCount={};
+ // 1st pass: 同じキーワードは1回まで、同じFunctionは最大2問まで。
+ for(const x of ranked){let it=x.it,k=(it.chunk||'').toLowerCase(),t=it.type;if((chunkCount[k]||0)>=1||(typeCount[t]||0)>=2)continue;picked.push(it);chunkCount[k]=(chunkCount[k]||0)+1;typeCount[t]=(typeCount[t]||0)+1;if(picked.length>=10)break}
+ // 2nd pass: 10問に足りない場合のみFunction上限を3へ緩和。ただし同一キーワード連発はしない。
+ if(picked.length<10)for(const x of ranked){let it=x.it,k=(it.chunk||'').toLowerCase(),t=it.type;if(picked.includes(it)||(chunkCount[k]||0)>=1||(typeCount[t]||0)>=3)continue;picked.push(it);chunkCount[k]=(chunkCount[k]||0)+1;typeCount[t]=(typeCount[t]||0)+1;if(picked.length>=10)break}
+ return picked
+}
 function renderQuestion(){
  answerLocked=false;hintLevel=0;hintTimes=[];
  E('feedback').classList.add('hidden');
